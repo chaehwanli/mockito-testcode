@@ -1,15 +1,15 @@
 package com.example.mytest;
 
-// UserServiceTest 클래스
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.when;
-
+import org.junit.jupiter.api.Test;
 import org.junit.Before;
-import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+// UserServiceTest 클래스
 public class UserServiceTest {
     // Mock 객체 생성
     @Mock
