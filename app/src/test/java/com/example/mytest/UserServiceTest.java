@@ -22,7 +22,8 @@ public class UserServiceTest {
     @Before
     public void setUp() {
         // Mock 객체 초기화
-        MockitoAnnotations.initMocks(this);
+        //MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
@@ -30,14 +31,14 @@ public class UserServiceTest {
         // given
         User user = new User("John", "Doe");
 
-        // UserRepository의 getUserById 메소드가 호출될 때, 위에서 생성한 user 객체를 반환하도록 설정
+        // UserRepository 의 getUserById()가 호출될 때, 위에서 생성한 user 객체를 반환 하도록 설정
         when(userRepository.getUserById(1)).thenReturn(user);
 
         // when
         User result = userService.getUserById(1);
 
         // then
-        // UserRepository의 getUserById 메소드 호출 결과가 예상한 대로인지 확인
+        // UserRepository 의 getUserById 메소드 호출 결과가 예상한 대로 인지 확인
         assertEquals(user, result);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.mytest;
 
+import com.example.mytest.UserRepository;
+
 public class UserService {
     private UserRepository userRepository;
 
